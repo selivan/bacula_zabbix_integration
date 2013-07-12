@@ -1,3 +1,6 @@
+IDEAS
+=====
+
 * Pytonize get-bacula-jobs-json.py: less bash, more python
 * Allow to use both absolute and relative paths in conf.py
 * Merge notify.py and notify_operator.py
@@ -8,3 +11,8 @@
 	item["job2","verify",""]
 	item["job3","restore",""]
 * Make trigger - WARNING if full backup job had 0 bytes written.
+
+BUGS
+====
+
+* Spare lest argument for notify_operator.py (not used)
