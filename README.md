@@ -34,3 +34,11 @@ Installation
 * Config Messages resuorce in bacula-director.conf. Example in file conf-bacula-dir-messages. Reload config for bacula-director
 * Add template tmpl bacula-director.xml to zabbix. Assign it to host with bacula-director.
 * Disable auto-generated triggers for jobs that are not backup type(restore jobs, ...)
+
+Feedback
+--------
+
+Feel free to send bug reports and feature requests here:
+ * https://github.com/selivan/bacula_zabbix_integration/issues
+ * mail: selivan5 AT yandex.ru
+If you are successfuly using my solution in production - please, write me few strings about it. It's very important for me to know that my work is not meaningless.
