@@ -41,4 +41,5 @@ Feedback
 Feel free to send bug reports and feature requests here:
  * https://github.com/selivan/bacula_zabbix_integration/issues
  * mail: selivan5 AT yandex.ru
+
 If you are successfuly using my solution in production - please, write me few strings about it. It's very important for me to know that my work is not meaningless.
