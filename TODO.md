@@ -16,3 +16,4 @@ BUGS
 ====
 
 * Spare lest argument for notify_operator.py (not used)
+* Return non-zero status if zabbix_sender failed (See EXIT_STATUS at https://www.zabbix.com/documentation/2.2/manpages/zabbix_sender)
