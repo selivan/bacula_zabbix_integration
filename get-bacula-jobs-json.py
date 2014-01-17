@@ -1,31 +1,28 @@
-#!/usr/bin/env python
-
-import subprocess
+#!/usr/bin/python2
+from bacula_parser import baculaParser
+from conf2dict import pyparseObj2Dict
 from conf import conf
 
-command="echo quit | timeout %d bconsole -c '%s'" % (conf['bconsole_wait'], conf['bconsole_conf_file'])
-exit_code=subprocess.Popen(command,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE).wait()
-if exit_code != 0:
-	print file(conf['jobs_cache_file']).read()
-	quit(1)
 
-out=open(conf['jobs_cache_file'],'w')
-out.write('{ "data": [ \n')
+def get_backup_jobs(dict_conf):
+    result = []
+    for k, v in dict_conf['Job'].iteritems():
+        if v.has_key('Type'):
+            if v['Type'] == 'Backup':
+                result.append(k)
+        else:
+            if v.has_key('JobDefs'):
+                if dict_conf['JobDefs'][v['JobDefs']]['Type'] == 'Backup':
+                    result.append(k)
+    return result
 
-command="echo show jobs | timeout %d bconsole -c %s | awk '/^Job/ {sub(\"name=\",\"\",$2); print $2}'" % (conf['bconsole_wait'], conf['bconsole_conf_file'])
-proc=subprocess.Popen(command, shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-jobs_raw=proc.communicate()[0]
-firstrun=1
-for job in jobs_raw.split('\n'):
-	if job == '': continue
-	if firstrun != 1:
-		out.write(',\n')
-	else:
-		firstrun=0
-	out.write("{ \"{#JOBNAME}\":\"%s\"}" % job)
+def main():
+    parsed = baculaParser(conf['bacula-dir_conf_file'])
+    dict_parsed = pyparseObj2Dict(parsed)
+    backup_jobs = get_backup_jobs(dict_parsed)
+    result = { 'data': [{'{#JOBNAME}': v} for v in backup_jobs] }
+    import json
+    print(json.dumps(result))
 
-out.write(' ] }')
-out.close()
-
-print file(conf['jobs_cache_file']).read()
-
+if __name__ == "__main__":
+    main()
