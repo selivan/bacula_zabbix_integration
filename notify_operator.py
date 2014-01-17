@@ -11,7 +11,9 @@ Hostnames in Zabbix and Bacula must correspond
 '''
 import sys
 import re
+import os
 import datetime
+import subprocess
 # Logging
 import logging
 logging.basicConfig(
