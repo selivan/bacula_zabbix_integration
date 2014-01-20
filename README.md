@@ -22,7 +22,8 @@ Triggers
  
 Installation
 ------------
- 
+
+* Copy file somewhere. Default is /etc/bacula/bacula-to-zabbix
 * Make sure that zabbix user can launch bconsole and get output of 'show jobs' command.
 * Tweak conf.py:
 	* path to zabbix_sender
@@ -31,7 +32,7 @@ Installation
 	* timeout for bconsole command in seconds (default 5 seconds)
 	* hostname for sending messages to zabbix
 * Add UserParameter from to zabbix_agentd.conf. Examole in file conf-zabbix_agentd-userparam. Restart zabbix_agentd
-* Config Messages resuorce in bacula-director.conf. Example in file conf-bacula-dir-messages. Reload config for bacula-director
+* Config Messages resuorce in bacula-director.conf. Example in file conf-bacula-dir-messages. You can directly include this file with @/path/to/bacula-director.conf. Reload config for bacula-director
 * Add template tmpl bacula-director.xml to zabbix. Assign it to host with bacula-director.
 * Disable auto-generated triggers for jobs that are not backup type(restore jobs, ...)
 
