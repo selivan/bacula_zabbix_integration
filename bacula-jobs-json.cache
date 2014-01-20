@@ -1,9 +1,1 @@
-{ "data": [ 
-{ "{#JOBNAME}":"bacula-catalog-restore"},
-{ "{#JOBNAME}":"bacula-catalog-backup"},
-{ "{#JOBNAME}":"armada-sc-01-backup"},
-{ "{#JOBNAME}":"armada-sc-02-backup"},
-{ "{#JOBNAME}":"armada-sc-02-backup-psql"},
-{ "{#JOBNAME}":"armada-sc-02-recover_psql"},
-{ "{#JOBNAME}":"armada-sc-02-backup-spool"},
-{ "{#JOBNAME}":"mgmt-sc-backup"} ] }
+stub
