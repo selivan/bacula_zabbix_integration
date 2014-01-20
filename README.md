@@ -28,11 +28,11 @@ Installation
 * Tweak conf.py:
 	* path to zabbix_sender
 	* bconsole config file
-	* jobs list cache file. This file should be avaliable for write to zabbix user.
+	* jobs list cache file. (!) This file should be avaliable for write to zabbix user.
 	* timeout for bconsole command in seconds (default 5 seconds)
 	* hostname for sending messages to zabbix
-* Add UserParameter from to zabbix_agentd.conf. Examole in file conf-zabbix_agentd-userparam. Restart zabbix_agentd
-* Config Messages resuorce in bacula-director.conf. Example in file conf-bacula-dir-messages. You can directly include this file with @/path/to/bacula-director.conf. Reload config for bacula-director
+* Add UserParameter from to zabbix_agentd.conf. Example in file conf-zabbix_agentd-userparam. Restart zabbix_agentd
+* Config Messages resuorce in bacula-director.conf. Example in file conf-bacula-dir-messages. You can directly include this file with @/etc/bacula/bacula-to-zabbix/conf-bacula-dir-messages. Reload config for bacula-director
 * Add template tmpl bacula-director.xml to zabbix. Assign it to host with bacula-director.
 * Disable auto-generated triggers for jobs that are not backup type(restore jobs, ...)
 
