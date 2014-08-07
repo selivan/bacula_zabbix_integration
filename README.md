@@ -1,3 +1,5 @@
+WARNING: https://www.bareos.org/en/faq/items/why_fork.html You may be interested in using Bareos instead of original Bacula.
+
 bacula_zabbix_integration
 =========================
 
