@@ -43,8 +43,6 @@ Installation
 Feedback
 --------
 
-Feel free to send bug reports and feature requests here:
- * https://github.com/selivan/bacula_zabbix_integration/issues
- * mail: selivan5 AT yandex.ru
+Feel free to send bug reports and feature requests [here](https://github.com/selivan/bacula_zabbix_integration/issues).
 
-If you are using this solution in production - please, write me few strings about it. It's very important for me to know that my work is not meaningless.
+**P.S.** If this code is useful for you - don't forget to put a star on it's [github repo](https://github.com/selivan/ansible_ipmi_lan_manage).
