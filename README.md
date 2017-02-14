@@ -1,6 +1,6 @@
-WARNING: https://www.bareos.org/en/faq/items/why_fork.html You may be interested in using Bareos instead of original Bacula.
+WARNING: https://www.bareos.org/en/faq/why_fork.html You may be interested in using Bareos instead of original Bacula.
 
-NOTICE: germanodlf created analogous tool based on this, which seems more mature and feature-reach: https://github.com/germanodlf/bacula-zabbix You may be interested to check it out.
+NOTICE: germanodlf created analogous tool based on this, which seems more mature and feature-reach: [germanodlf/bacula-zabbix](https://github.com/germanodlf/bacula-zabbix) You may be interested to check it out.
 
 bacula_zabbix_integration
 =========================
